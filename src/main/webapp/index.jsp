@@ -17,6 +17,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
+            overflow: hidden;
         }
         h1 {
             font-size: 3em;
@@ -38,28 +40,58 @@
             background-color: #fff;
             color: #0077b5;
         }
-        #linkedin-profile {
-            width: 80%;
-            height: 500px;
-            display: none;
-            margin-top: 20px;
-            overflow-y: auto;
+        .circle, .rectangle, .triangle {
+            position: absolute;
+            opacity: 0.3;
+            z-index: -1;
         }
-        .profile-image {
-            width: 200px;
-            height: 200px;
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #0077b5;
             border-radius: 50%;
-            margin-top: 20px;
+        }
+        .rectangle {
+            width: 150px;
+            height: 80px;
+            background-color: #0077b5;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #0077b5;
+        }
+        .shape1 {
+            top: 10%;
+            left: 10%;
+        }
+        .shape2 {
+            top: 20%;
+            right: 10%;
+        }
+        .shape3 {
+            bottom: 10%;
+            left: 20%;
+        }
+        .shape4 {
+            bottom: 20%;
+            right: 20%;
         }
     </style>
 </head>
 <body>
-    <img src="webapp/LinkedIn%20Profile.png" alt="Mubasher Abdul Rauf's Profile Image" class="profile-image">
     <h1>Mubasher Abdul Rauf</h1>
     <a href="https://www.linkedin.com/in/mubasher-abdul-rauf/" target="_blank">Connect with me on LinkedIn</a>
     <div id="linkedin-profile">
         <h2>Loading LinkedIn Profile...</h2>
     </div>
+    <!-- Add DevOps related graphics -->
+    <div class="circle shape1"></div>
+    <div class="rectangle shape2"></div>
+    <div class="triangle shape3"></div>
+    <div class="circle shape4"></div>
     <script>
         function showLinkedInProfile() {
             var profileDiv = document.getElementById('linkedin-profile');
