@@ -45,11 +45,18 @@
             margin-top: 20px;
             overflow-y: auto;
         }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
+    <img src="webapp/LinkedIn%20Profile.png" alt="Mubasher Abdul Rauf's Profile Image" class="profile-image">
     <h1>Mubasher Abdul Rauf</h1>
-    <a href="#" onclick="showLinkedInProfile()">Connect with me on LinkedIn</a>
+    <a href="https://www.linkedin.com/in/mubasher-abdul-rauf/" target="_blank">Connect with me on LinkedIn</a>
     <div id="linkedin-profile">
         <h2>Loading LinkedIn Profile...</h2>
     </div>
