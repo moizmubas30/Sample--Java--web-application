@@ -40,12 +40,12 @@
             background-color: #fff;
             color: #0077b5;
         }
-        .circle, .rectangle, .triangle {
+        .shape {
             position: absolute;
             opacity: 0.3;
             z-index: -1;
         }
-        .circle {
+        .logo {
             width: 100px;
             height: 100px;
             background-color: #0077b5;
@@ -63,42 +63,49 @@
             border-right: 50px solid transparent;
             border-bottom: 100px solid #0077b5;
         }
-        .shape1 {
-            top: 10%;
-            left: 10%;
+        .cloud {
+            width: 120px;
+            height: 60px;
+            background-color: #0077b5;
+            border-radius: 60px 60px 0 0;
+            position: absolute;
         }
-        .shape2 {
-            top: 20%;
-            right: 10%;
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background-color: #0077b5;
+            border-radius: 50%;
         }
-        .shape3 {
-            bottom: 10%;
-            left: 20%;
+        .cloud::before {
+            width: 80px;
+            height: 80px;
+            top: -40px;
+            left: 10px;
         }
-        .shape4 {
-            bottom: 20%;
-            right: 20%;
+        .cloud::after {
+            width: 100px;
+            height: 100px;
+            top: -50px;
+            right: 10px;
         }
+        .shape1 { top: 10%; left: 10%; }
+        .shape2 { top: 20%; right: 10%; }
+        .shape3 { bottom: 10%; left: 20%; }
+        .shape4 { bottom: 20%; right: 20%; }
+        .shape5 { top: 15%; left: 50%; transform: translateX(-50%); }
+        .shape6 { bottom: 15%; right: 50%; transform: translateX(50%); }
     </style>
 </head>
 <body>
     <h1>Mubasher Abdul Rauf</h1>
     <a href="https://www.linkedin.com/in/mubasher-abdul-rauf/" target="_blank">Connect with me on LinkedIn</a>
-    <div id="linkedin-profile">
-        <h2>Loading LinkedIn Profile...</h2>
-    </div>
-    <!-- Add DevOps related graphics -->
-    <div class="circle shape1"></div>
-    <div class="rectangle shape2"></div>
-    <div class="triangle shape3"></div>
-    <div class="circle shape4"></div>
-    <script>
-        function showLinkedInProfile() {
-            var profileDiv = document.getElementById('linkedin-profile');
-            var profileContent = '<iframe src="https://www.linkedin.com/in/mubasher-abdul-rauf/embed/" width="100%" height="100%" frameborder="0"></iframe>';
-            profileDiv.innerHTML = profileContent;
-            profileDiv.style.display = 'block';
-        }
-    </script>
+    <!-- Add DevOps and cloud related graphics -->
+    <div class="logo shape shape1"></div>
+    <div class="rectangle shape shape2"></div>
+    <div class="triangle shape shape3"></div>
+    <div class="logo shape shape4"></div>
+    <div class="cloud shape shape5"></div>
+    <div class="cloud shape shape6"></div>
 </body>
 </html>
