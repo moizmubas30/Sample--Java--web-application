@@ -22,10 +22,6 @@
             font-size: 3em;
             margin: 0.5em;
         }
-        p {
-            font-size: 1.5em;
-            margin: 0.5em;
-        }
         a {
             color: #fff;
             background-color: #2980b9;
@@ -36,26 +32,29 @@
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
             margin-top: 20px;
+            display: inline-block;
         }
         a:hover {
             background-color: #fff;
             color: #2980b9;
         }
-        .profile-highlight {
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 50px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        .linkedin-embed {
+            width: 80%;
+            height: 500px;
+            border: none;
         }
     </style>
 </head>
 <body>
     <h1>Mubasher Abdul Rauf</h1>
-    <div class="profile-highlight">
-        <h2>About Me</h2>
-        <p>I'm a passionate individual with expertise in [Your Area of Expertise]. I have a strong background in [Your Field], and I'm always eager to connect with like-minded professionals. Feel free to reach out to me on LinkedIn!</p>
-        <a href="https://www.linkedin.com/in/mubasher-abdul-rauf/" target="_blank">Connect with me on LinkedIn</a>
+    <a href="https://www.linkedin.com/in/mubasher-abdul-rauf/" target="_blank">Connect with me on LinkedIn</a>
+    <div id="linkedin-profile" style="display: none;">
+        <iframe class="linkedin-embed" src="https://www.linkedin.com/in/mubasher-abdul-rauf/embed/" frameborder="0" allowfullscreen></iframe>
     </div>
+    <script>
+        function showLinkedInProfile() {
+            document.getElementById('linkedin-profile').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
